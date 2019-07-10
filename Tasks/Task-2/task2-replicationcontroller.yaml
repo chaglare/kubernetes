@@ -1,35 +1,32 @@
+
 apiVersion: v1
 kind: ReplicationController
 metadata:
+  labels: 
+    rs: ngnix
   name: nginx-test
-  labels:
-    nginx: rc
 spec:
-  replicas: 1
+  replicas: 3
   selector:
-    name: caglar
+    kube: task2
   template:
     metadata:
       labels:
-        name: caglar
-    spec:
+        kube: task2
+    spec: 
       containers:
       - name: nginx-test
         image: nginx
         ports:
         - containerPort: 80
-
-
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: nginx-svc
-spec:
+spec: 
   selector:
-    nginx: rc
+    rs: nginx
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-  type: LoadBalancer
+   - protocol: TCP
+     port: 80
