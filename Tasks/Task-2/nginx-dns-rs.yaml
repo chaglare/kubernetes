@@ -28,7 +28,7 @@ metadata:
     name: nginx-dns
 spec:
   type: ExternalName
-  externalName: example.com
+  externalName: caglarcavdar.com
   ports:
   - port: 80
     protocol: TCP
