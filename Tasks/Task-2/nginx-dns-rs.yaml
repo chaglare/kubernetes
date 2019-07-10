@@ -26,6 +26,8 @@ metadata:
   name: nginx-dns
 spec:
   clusterIP: none
-  type: ExternalName
-  selector:
-    nginx: nginx-dns
+  ports:
+  - name: nginx-dns
+    port: 80
+    targetPort: 8080
+    
