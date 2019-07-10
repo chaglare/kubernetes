@@ -24,10 +24,14 @@ apiVersion: v1
 kind: Service
 metadata: 
   name: nginx-dns
+  labels:
+    name: nginx-dns
 spec:
-  selector:
-    nginx: nginx-dns
-  clusterIP: None
+  type: ExternalName
+  externalName: example.com
+  ports:
+  - port: 80
+    protocol: TCP
 
 
 ---
@@ -35,10 +39,3 @@ apiVersion: v1
 kind: Endpoints
 metadata:
   name: nginx-dns
-  labels:
-    nginx: nginx-dns
-subsets:
-  - addresses:
-      - ip: 10.128.0.6
-      
-  - ports: 9999
