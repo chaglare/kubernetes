@@ -25,5 +25,6 @@ kind: Service
 metadata: 
   name: nginx-dns
 spec:
-  nginx: nginx-dns
-clusterIP: None
+  selector:
+    nginx: nginx-dns
+  clusterIP: None
