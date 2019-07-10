@@ -14,3 +14,7 @@ spec:
       containers:
       - name: daemon-task
         image: ubuntu
+        args:
+        - /bin/bash
+        - c
+        - sleep 1000
