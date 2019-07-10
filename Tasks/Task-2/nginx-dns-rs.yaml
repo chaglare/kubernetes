@@ -28,3 +28,17 @@ spec:
   selector:
     nginx: nginx-dns
   clusterIP: None
+
+
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: nginx-dns
+  labels:
+    nginx: nginx-dns
+subsets:
+  - addresses:
+      - ip: 10.128.0.6
+      
+  - ports: 9999
