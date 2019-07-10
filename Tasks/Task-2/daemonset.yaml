@@ -1,4 +1,4 @@
-apiVersion: extentions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: ubuntu-ds
@@ -17,4 +17,4 @@ spec:
         args:
         - /bin/bash
         - c
-        - sleep 1000
+        - sleep 1000000
