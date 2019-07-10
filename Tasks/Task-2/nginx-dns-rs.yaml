@@ -28,7 +28,7 @@ metadata:
     name: nginx-dns
 spec:
   type: ExternalName
-  externalName: tower.caglarcavdar.com
+  externalName: example.com
   ports:
   - port: 80
     protocol: TCP
