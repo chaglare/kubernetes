@@ -1,9 +1,9 @@
 apiVersion: extensions/v1beta1
 kind: ReplicaSet
-metadata: 
+metadata:
+  name: k8-service
   labels:
-    nginx: task2
-  name: replicaset
+    app: k8-service
 spec:
   replicas: 3
   selector:
@@ -17,18 +17,5 @@ spec:
       containers:
       - name: nginx
         image: nginx
-
-
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: k8-service
-spec:
-  selector:
-    nginx: task2
-  ports:
-  - protocol: TCP
-    port: 81
-  type: NodePort
+        ports:
+        - containerPort: 81
