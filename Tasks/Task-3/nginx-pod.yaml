@@ -11,4 +11,4 @@ containers:
       mountPath: /usr/share/nginx/html
 volumes:
   - name: data
-    emptyDir: {}
+    #emptyDir: {}
