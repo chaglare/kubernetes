@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: nginx-pod
 spec:
-containers:
+container:
   - name: nginx-pod
     image: nginx:1.14.0
     volumeMounts:
