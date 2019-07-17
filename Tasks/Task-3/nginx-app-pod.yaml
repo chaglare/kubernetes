@@ -8,9 +8,9 @@ metadata:
     containers:
     - name: nginx-app 
       image: nginx
-      imagePullPolicy: Always
       ports:
-      - containerPort: 80 
+      - containerPort: 80
+        protocol: TCP 
       volumeMounts:
       - name: app-data
         mountPath: /usr/share/nginx/html
