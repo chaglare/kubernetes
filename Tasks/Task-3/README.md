@@ -1,4 +1,4 @@
 # Kubernetes Task-3
 ---
 
-![](images/Task-3.PNG)
+![](images/Task-3.png)
