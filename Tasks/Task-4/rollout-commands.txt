@@ -1,3 +1,5 @@
+
+
 -Checking the rollout history of nginx-app
     
     kubectl rollout history deployment nginx-app
@@ -6,3 +8,9 @@
 -Rollback the update to previous version
 
     kubectl rollout undo deployment nginx-app --to-revision=1
+
+
+
+
+
+    
