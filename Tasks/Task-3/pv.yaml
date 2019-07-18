@@ -3,7 +3,7 @@ kind: PersistentVolume
 metadata:
   name: app-data
 spec:
-  storageClassName: manual
+  storageClassName: ssd
   capacity:
     storage: 1Gi #Size of the volume
   accessModes:
