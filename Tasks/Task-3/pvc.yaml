@@ -4,7 +4,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: app-data-claim
 spec:
-  storageClassName: manual
+  storageClassName: ssd
   accessModes:
     - ReadWriteOnce
   resources:
