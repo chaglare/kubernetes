@@ -22,11 +22,9 @@ spec:
       - name: mysql
         image: mysql:5.6
         env:
+          # Test, use secret in prod
         - name: MYSQL_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-passwd
-              key: password
+          value: db-user-pass
         livenessProbe:
           tcpSocket:
             port: 3306
@@ -35,9 +33,3 @@ spec:
         volumeMounts:
         - name: db-volume
           mountPath: /var/lib/mysql
-      volumes:
-      - name: mysql-volume
-        secret:
-          secretName: mysql-passwd
-          
-
