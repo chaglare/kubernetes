@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+  kubernetes.io/change-cause: "wordpress:4.8-apache"
   name: wordpress
   labels:
     app: wordpress
