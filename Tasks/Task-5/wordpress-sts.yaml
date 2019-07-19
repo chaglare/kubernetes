@@ -15,8 +15,6 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  annotations:
-    kubernetes.io/change-cause: "wordpress:4.8-apache"
   name: wordpress-sts
 spec:
   selector:
@@ -36,9 +34,5 @@ spec:
         ports:
         - containerPort: 80
           name: web
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
+
 
