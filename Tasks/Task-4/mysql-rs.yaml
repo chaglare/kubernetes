@@ -10,7 +10,20 @@ spec:
   resources:
     requests:
       storage: 1Gi
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-mysql
+  labels:
+    app: wordpress
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: mysql-rs
+    tier: mysql
+  clusterIP: None
 ---
 apiVersion: extensions/v1beta1
 kind: ReplicaSet
