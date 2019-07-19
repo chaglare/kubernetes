@@ -50,7 +50,7 @@ spec:
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
-          value: wordpress-mysql
+          value: db-user-pass
         - name: WORDPRESS_DB_PASSWORD
           valueFrom:
             secretKeyRef:
