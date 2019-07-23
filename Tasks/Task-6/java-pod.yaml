@@ -10,6 +10,7 @@ spec:
     ssd: "true"
   containers:
   - image: centos
+    env: test
     name: centos
     stdin: true
     tty: true
