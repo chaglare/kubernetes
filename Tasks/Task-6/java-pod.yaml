@@ -11,7 +11,7 @@ spec:
   containers:
   - image: centos
     env: 
-      name: dev
+    -  name: dev
     name: centos
     stdin: true
     tty: true
