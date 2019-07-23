@@ -4,6 +4,6 @@ metadata:
   #namespace: dev
   name: default-deny-netpol
 spec:
-  podSelector: {}
+  podSelector: dev
   policyTypes:
   - Ingress
