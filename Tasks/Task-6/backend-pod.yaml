@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   namespace: dev
   labels: 
-    run: backend-pod
+    run: dev
   name: backend-pod
 spec:
   nodeSelector:

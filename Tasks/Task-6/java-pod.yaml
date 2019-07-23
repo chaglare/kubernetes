@@ -3,15 +3,13 @@ kind: Pod
 metadata:
   namespace: dev
   labels:
-    run: java-pod
+    run: dev
   name: java-pod
 spec:
   nodeSelector:
     ssd: "true"
   containers:
   - image: centos
-    labels: 
-      env: dev
     name: centos
     stdin: true
     tty: true
