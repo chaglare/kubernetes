@@ -7,6 +7,12 @@ metadata:
 spec:
   podSelector:
     matchLabels:
+      env: dev
   ingress:
   - from:
-    - podSelector: {}
+    - podSelector:
+        matchLabels:
+          env: dev
+    ports:   
+    - protocol: TCP
+      port: 80
