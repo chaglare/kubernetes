@@ -27,7 +27,6 @@ spec:
       labels:
         app: wordpress # has to match .spec.selector.matchLabels
     spec:
-      terminationGracePeriodSeconds: 10
       containers:
       - name: wordpress
         image: wordpress:latest
