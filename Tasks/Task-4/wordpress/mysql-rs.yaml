@@ -25,8 +25,8 @@ spec:
     tier: mysql
   clusterIP: None
 ---
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
-kind: Deployment
+apiVersion: extension/v1beta1 # for versions before 1.9.0 use apps/v1beta2
+kind: ReplicaSet
 metadata:
   name: wordpress-mysql
   labels:
@@ -55,7 +55,9 @@ spec:
               key: password
         ports:
         - containerPort: 3306
-          name: mysql
+        volumeMount:
+        - name: mysql
+          mountPath: /var/lib/mysql
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
