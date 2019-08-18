@@ -3,6 +3,9 @@ kind: Pod
 metadata:
   name: my-securitycontext-pod
 spec:
+  securityContext:
+    runAsUser: 2000
+    fsGroup: 3000
   containers:
   - name: myapp-container
     image: busybox
