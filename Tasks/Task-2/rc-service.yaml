@@ -9,4 +9,4 @@ spec:
   selector:
    name: k8-service
   ports:
-    - port: 80
+    - port: 81
