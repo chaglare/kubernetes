@@ -6,13 +6,13 @@ metadata:
     app: k8-service
 spec:
   replicas: 3
-  selector:
-    matchLabels:
-      task: two
-  template:
-    metadata:
-      labels:
-        task: two
+  # selector:
+  #   matchLabels:
+  #     task: two
+  # template:
+  #   metadata:
+  #     labels:
+  #       task: two
     spec:
       containers:
       - name: nginx
