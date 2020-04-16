@@ -12,18 +12,18 @@ spec:
       httpGet:
         path: /healthy
         port: 8080
-      initialDelaySeconds: 5
-      timeoutSeconds: 1
-      periodSeconds: 10
-      failureThreshold: 3
+      initialDelaySeconds: 5                      # You don't have to use this line unless you need it.
+      timeoutSeconds: 1                           # You don't have to use this line unless you need it.
+      periodSeconds: 10                           # You don't have to use this line unless you need it.
+      failureThreshold: 3                         # You don't have to use this line unless you need it.
     readinessProbe:
       httpGet:
         path: /ready
         port: 8080
-      periodSeconds: 2
-      initialDelaySeconds: 0
-      failureThreshold: 3
-      successThreshold: 1
+      periodSeconds: 2                            # You don't have to use this line unless you need it.
+      initialDelaySeconds: 0                      # You don't have to use this line unless you need it.
+      failureThreshold: 3                         # You don't have to use this line unless you need it.
+      successThreshold: 1                         # You don't have to use this line unless you need it.
     ports:
     - containerPort: 8080
       name: http
